@@ -3,10 +3,10 @@ Autor: Rozumek29 \
 Version: 1.1
 
 ### TODO LIST
-*[x] Mute Audio in browser. \
-*[ ] Fix the end point of the loop. \
-*[ ] Other Browser like Brave, firefox, Opera. \
-*[ ] Do Log file. 
+* [x] Mute Audio in browser. \
+* [ ] Fix the end point of the loop. \
+* [ ] Other Browser like Brave, firefox, Opera. \
+* [ ] Do Log file. 
 
 ## CHANGE LOG
     Version 2.0
