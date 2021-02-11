@@ -6,7 +6,7 @@ Version: 1.1
 *[x] Mute Audio in browser. \
 *[ ] Fix the end point of the loop. \
 *[ ] Other Browser like Brave, firefox, Opera. \
-*[ ] Do Log file. \
+*[ ] Do Log file. 
 
 ## CHANGE LOG
     Version 2.0
