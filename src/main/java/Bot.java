@@ -23,6 +23,14 @@ public class Bot {
 
         //Setup driver
         ChromeOptions chromeOptions = new ChromeOptions();
+        try {
+            if (args[0].equalsIgnoreCase("brave")){
+                chromeOptions.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+            }
+        }catch (ArrayIndexOutOfBoundsException e){
+
+        }
+
         chromeOptions.addArguments("--mute-audio");
         WebDriver driver = new ChromeDriver(chromeOptions);
 
