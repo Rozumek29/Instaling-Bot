@@ -21,7 +21,7 @@ public class StartBotController implements Initializable {
         //Setup driver
         System.setProperty("webdriver.chrome.driver", controler.dir+"/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
-        if (controler.getSettings("Other").equalsIgnoreCase("Other")){
+        if (controler.getSettings("Browser").equalsIgnoreCase("Other")){
             chromeOptions.setBinary(controler.getSettings("Browser Path"));
         }
         chromeOptions.addArguments("--mute-audio");

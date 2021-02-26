@@ -3,7 +3,6 @@ Autor: Rozumek29 \
 Version: 3.0
 
 ### TODO LIST
-- [ ] Fixed gui crashing when bot was running.
 
 ## CHANGE LOG
     Version 3.0
