@@ -1,0 +1,74 @@
+.parent{
+    -fx-background-color: transparent;
+}
+.dark-panel{
+    -fx-background-color: #45515F;
+}
+.main_btns{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: transparent;
+}
+.icons{
+    -fx-fill: #596575;
+}
+.main_btns:hover{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-border-color: #F3A978;
+    -fx-border-width: 0px 0px 3px 0px;
+    -fx-border-radius: 0px;
+    -fx-text-fill: transparent;
+}
+.main_btns:hover .icons{
+    -fx-fill: white;
+}
+.inputs{
+    -fx-text-fill: black;
+    -fx-background-radius: 20px 20px 20px 20px;
+}
+
+.buttons{
+    -fx-background-color: #596575;
+    -fx-background-radius: 0px;
+    -fx-text-fill: wheat;
+}
+.buttons:hover{
+    -fx-background-color: #F3A978;
+    -fx-background-radius: 0px;
+    -fx-text-fill: wheat;
+}
+.circle{
+    -fx-background-radius: 100%;
+    -fx-border-radius: 100%;
+    -fx-border-color: #596575;
+    -fx-border-width: 2px;
+ }
+.slider > .track{
+    -fx-background-color: #f3a978;
+}
+.slider > .thumb{
+    -fx-background-color: #EF8A47;
+}
+.slider > .colored-track {
+    -fx-background-color: #f3a978;
+}
+.slider > .animated-thumb {
+    -fx-background-color: #f3a978;
+}
+.slider .slider-value {
+    -fx-fill: white;
+    -fx-stroke: white;
+}
+.slider > .ticks{
+    -fx-text-fill: white;
+}
+.choice-box{
+    -fx-background-color: #34404E;
+    -fx-background-radius: 0px;
+}
+.choice-box *{
+    -fx-background-color: #34404E;
+    -fx-text-fill: wheat;
+    -fx-fill: wheat;
+}
