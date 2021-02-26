@@ -1,4 +1,3 @@
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSlider;
 import com.jfoenix.controls.JFXToggleButton;
 import javafx.collections.FXCollections;
@@ -27,8 +26,6 @@ public class SettingsUIController implements Initializable {
     @FXML
     private JFXToggleButton s_RememberMe;
     @FXML
-    private JFXButton choose_browser;
-    @FXML
     private JFXSlider s_Delay;
     @FXML
     private ChoiceBox select_browser;
@@ -37,13 +34,6 @@ public class SettingsUIController implements Initializable {
     private String browserPath;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        select_browser.setOnAction(event ->{
-            if (select_browser.getValue() == "Other"){
-                choose_browser.setVisible(true);
-            }else {
-                choose_browser.setVisible(false);
-            }
-        } );
         select_browser.setItems(list);
         select_browser.setValue(controler.getSettings("Browser"));
         s_RememberMe.setSelected(controler.getSelected());
@@ -56,11 +46,8 @@ public class SettingsUIController implements Initializable {
         pane.getChildren().setAll(fxml);
     }
 
-    public void save_settings(MouseEvent mouseEvent) throws IOException {
+    public void save_settings(MouseEvent mouseEvent) {
         controler.setSettings(s_RememberMe.isSelected(), s_Delay.getValue(), select_browser.getValue().toString(), browserPath);
-        Parent fxml = FXMLLoader.load(getClass().getResource("/StartBotUI.fxml"));
-        pane.getChildren().removeAll();
-        pane.getChildren().setAll(fxml);
     }
 
 
@@ -73,5 +60,6 @@ public class SettingsUIController implements Initializable {
                 this.browserPath = file.getAbsolutePath();
             }
         }catch (Exception e){}
+
     }
 }
