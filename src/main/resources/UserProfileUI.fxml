@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="400.0" styleClass="dark-panel" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserProfileUI">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="165.0" styleClass="circle">
+         <graphic>
+            <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#596575" size="6em" />
+         </graphic>
+      </Label>
+      <TextField fx:id="login" alignment="CENTER" layoutX="126.0" layoutY="223.0" promptText="Login" styleClass="inputs" />
+      <JFXButton layoutX="151.0" layoutY="363.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#login_ok" prefHeight="35.0" prefWidth="100.0" styleClass="buttons" text="OK">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <PasswordField fx:id="password" alignment="CENTER" layoutX="127.0" layoutY="280.0" promptText="Password" styleClass="inputs" />
+   </children>
+</AnchorPane>

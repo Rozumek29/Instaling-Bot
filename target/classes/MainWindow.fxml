@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="400.0" style="-fx-background-color: transparent;" styleClass="parent" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindowControler">
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="400.0" styleClass="dark-panel">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_settings" prefHeight="65.0" prefWidth="65.0" styleClass="main_btns">
+               <graphic>
+                  <FontAwesomeIconView glyphName="GEAR" size="1.8em" styleClass="icons" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_user_profile" prefHeight="65.0" prefWidth="65.0" styleClass="main_btns">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER" size="1.8em" styleClass="icons" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="35.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#open_Words_List" prefHeight="65.0" prefWidth="65.0" styleClass="main_btns">
+               <graphic>
+                  <FontAwesomeIconView glyphName="QUESTION" size="1.8em" styleClass="icons" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="35.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#app_close" prefHeight="65.0" prefWidth="65.0" styleClass="main_btns">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CLOSE" size="1.8em" styleClass="icons" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="35.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Pane fx:id="pane" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="400.0" />
+   </children>
+</AnchorPane>
