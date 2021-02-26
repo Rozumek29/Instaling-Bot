@@ -41,7 +41,7 @@
       </Label>
       <Label layoutX="14.0" layoutY="120.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" text="Select the browser in which the program is to run." textFill="#b5b2b2" wrapText="true" />
       <ChoiceBox fx:id="select_browser" layoutX="276.0" layoutY="111.0" prefHeight="30.0" prefWidth="70.0" />
-      <JFXButton layoutX="360.0" layoutY="113.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#setDirectory" prefHeight="25.0" prefWidth="25.0" styleClass="buttons" text="...">
+      <JFXButton fx:id="choose_browser" layoutX="360.0" layoutY="113.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#setDirectory" prefHeight="25.0" prefWidth="25.0" styleClass="buttons" text="...">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
