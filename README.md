@@ -8,6 +8,7 @@ Version: 3.5
 ## CHANGE LOG
     Version 3.5
         - Added Multithreading.
+        - Database of learned words is now independent of updates.
     Version 3.0
         - Bot is now one .exe file, not big package like before.
         - Added GUI

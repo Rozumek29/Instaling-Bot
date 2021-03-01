@@ -5,7 +5,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="400.0" styleClass="dark-panel" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartBotController">
    <children>
       <Text fill="WHEAT" layoutX="92.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instaling Bot">
@@ -18,6 +17,6 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </JFXButton>
-      <Text fill="#b5a586" layoutX="166.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VERSION 3.0" />
+      <Text fill="#b5a586" layoutX="166.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VERSION 3.5" />
    </children>
 </AnchorPane>

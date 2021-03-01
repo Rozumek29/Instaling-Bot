@@ -42,6 +42,7 @@ public class Bot extends Thread {
         }catch (Exception e){
             e.printStackTrace();
             try {
+                //For safety.
                 Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
             } catch (IOException ioException) {
                 ioException.printStackTrace();
