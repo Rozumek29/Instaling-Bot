@@ -2,10 +2,17 @@
 Autor: Rozumek29 \
 Version: 3.5
 
-### TODO LIST
-    none
+## Instalation Gudie
+If you want download my bot, just go to the [releases](https://github.com/Rozumek29/Instaling-Bot/releases), download the newest version, lunch it, and enjoy :)
 
-## CHANGE LOG
+## How it works ?
+The bot is logging in as you, it starts a daily session. It searches for a matching word in the database, if it is missing, a given word is omitted, I take the correct answer and add it to the database. Next time, the bot will already know this word and will give the correct answer.
+
+## Manual
+    1. Enter your login and password in the appropriate tab and click ok.
+    2. Go to settings, you don't have to change anything if you don't want to. To change the browser to a different one, select "Other" and enter the path to the .exe file of your browser [The browser must be chrome-based (Opera, Brave e.c.t)].
+    3. Save settings, and start the bot.
+### CHANGE LOG
     Version 3.5
         - Added Multithreading.
         - Database of learned words is now independent of updates.
