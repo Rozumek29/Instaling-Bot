@@ -27,3 +27,5 @@ The bot is logging in as you, it starts a daily session. It searches for a match
         - Now the browser that the bot is running has muted annoying sounds.
         - Now the ChromeDriver process gets killed right after the session ends.
         - Bot now saves his activities in the 'lastest.log' file in the 'log' folder
+### MIT License
+[Check it out](https://github.com/Rozumek29/Instaling-Bot/blob/master/LICENSE)
