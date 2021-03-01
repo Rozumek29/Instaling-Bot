@@ -1,11 +1,13 @@
 # Instaling Bot
 Autor: Rozumek29 \
-Version: 3.0
+Version: 3.5
 
 ### TODO LIST
-- [ ] Fixed gui crashing when bot was running.
+    none
 
 ## CHANGE LOG
+    Version 3.5
+        - Added Multithreading.
     Version 3.0
         - Bot is now one .exe file, not big package like before.
         - Added GUI
