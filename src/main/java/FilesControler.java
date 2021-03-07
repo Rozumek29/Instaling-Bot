@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import mslinks.ShellLink;
 import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -9,32 +10,53 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 public class FilesControler {
-    File dir, login, words, settings, chromedriver;
+    File dir, login, words, settings, driver, autorun;
+    String userDir = System.getProperty("user.home");
 
     FilesControler() {
-        String userDir = System.getProperty("user.home");
         dir = new File(userDir + "/InstalingBot");
         login = new File(dir + "/login.json");
         words = new File(dir + "/words.json");
         settings = new File(dir + "/settings.json");
-    }
+        driver = new File(dir + "/chromedriver.exe");
+        autorun = new File(userDir+"\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Notyfication.jar");
+}
 
-    public void dirExist() {
+    public void dirsExist() {
         if (!dir.exists()) {
             dir.mkdir();
             try {
                 FileUtils.copyURLToFile(getClass().getResource("/login.json"), login);
                 FileUtils.copyURLToFile(getClass().getResource("/words.json"), words);
                 FileUtils.copyURLToFile(getClass().getResource("/settings.json"), settings);
-                File driver = new File(dir + "/chromedriver.exe");
                 FileUtils.copyURLToFile(getClass().getResource("/chromedriver.exe"), driver);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+        checkAutoRun();
     }
 
-    public void setSettings(Boolean rememberMe, double delay, String browser, String browserPath) {
+    public void checkAutoRun(){
+        if (getSettingsBoolean("Notyfication") && (!autorun.exists())){
+            try {
+                FileUtils.copyURLToFile(getClass().getResource("/Notyfication.jar"), autorun);
+                Runtime.getRuntime().exec("cmd.exe /c java -jar "+userDir+"\\AppData\\Roaming\\Microsoft\\Windows\\Start_Menu\\Programs\\Startup\\Notyfication.jar");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else if (!(getSettingsBoolean("Notyfication")) && autorun.exists()){
+            try {
+                Runtime.getRuntime().exec("taskkill /F /IM javaw.exe");
+                autorun.delete();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    public void setSettings(boolean rememberMe, double delay, String browser, String browserPath, boolean nt_on, int nt_h, int nt_min) {
         JSONParser parser = new JSONParser();
         try {
             Object object = parser.parse(new FileReader(settings, StandardCharsets.UTF_8));
@@ -44,6 +66,9 @@ public class FilesControler {
             jsonObject.put("Delay", delay);
             jsonObject.put("Browser", browser);
             jsonObject.put("Browser Path", browserPath);
+            jsonObject.put("Notyfication", nt_on);
+            jsonObject.put("Hour", nt_h);
+            jsonObject.put("Min", nt_min);
 
             try (FileWriter writer = new FileWriter(settings, StandardCharsets.UTF_8)) {
                 writer.write(jsonObject.toJSONString());
@@ -73,21 +98,21 @@ public class FilesControler {
         return delay;
     }
 
-    public boolean getSelected() {
+    public boolean getSettingsBoolean(String s) {
         JSONParser parser = new JSONParser();
-        boolean selected = true;
+        boolean x = true;
         try {
             Object object = parser.parse(new FileReader(settings, StandardCharsets.UTF_8));
             JSONObject jsonObject = (JSONObject) object;
-            selected = (boolean) jsonObject.get("RememberMe");
-            return selected;
+            x = (boolean) jsonObject.get(s);
+            return x;
 
         } catch (ParseException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return selected;
+        return x;
     }
 
     public void savePass(String login, String password) {

@@ -24,7 +24,7 @@ public class UserProfileUI implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (controler.getSelected())
+        if (controler.getSettingsBoolean("RememberMe"))
         {
             login.setText(controler.getLogin("Login"));
             password.setText(controler.getLogin("Password"));
@@ -35,7 +35,7 @@ public class UserProfileUI implements Initializable {
     }
 
     public void login_ok(MouseEvent mouseEvent) throws IOException {
-        if (controler.getSelected()){
+        if (controler.getSettingsBoolean("RememberMe")){
             controler.savePass(login.getText(), password.getText());
         }else {
             temp_login = login.getText();

@@ -6,7 +6,7 @@
 
     <groupId>me.Rozumek29</groupId>
     <artifactId>InstalingBot_V3</artifactId>
-    <version>3.0</version>
+    <version>3.6</version>
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
@@ -18,6 +18,11 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>15.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.vatbub</groupId>
+            <artifactId>mslinks</artifactId>
+            <version>1.0.6.1</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>

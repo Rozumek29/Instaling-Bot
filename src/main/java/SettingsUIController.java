@@ -1,5 +1,6 @@
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSlider;
+import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXToggleButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,6 +24,12 @@ public class SettingsUIController implements Initializable {
     ObservableList<String> list = FXCollections.observableArrayList("Chrome", "Other");
 
     @FXML
+    public JFXToggleButton nt_on;
+    @FXML
+    public JFXTextField nt_h;
+    @FXML
+    public JFXTextField nt_min;
+    @FXML
     private Pane pane;
     @FXML
     private JFXToggleButton s_RememberMe;
@@ -44,9 +51,12 @@ public class SettingsUIController implements Initializable {
                 choose_browser.setVisible(false);
             }
         } );
+        nt_on.setSelected(controler.getSettingsBoolean("Notyfication"));
+        nt_h.setText(controler.getSettings("Hour"));
+        nt_min.setText(controler.getSettings("Min"));
         select_browser.setItems(list);
         select_browser.setValue(controler.getSettings("Browser"));
-        s_RememberMe.setSelected(controler.getSelected());
+        s_RememberMe.setSelected(controler.getSettingsBoolean("RememberMe"));
         s_Delay.setValue(controler.getDelay());
     }
 
@@ -57,10 +67,11 @@ public class SettingsUIController implements Initializable {
     }
 
     public void save_settings(MouseEvent mouseEvent) throws IOException {
-        controler.setSettings(s_RememberMe.isSelected(), s_Delay.getValue(), select_browser.getValue().toString(), browserPath);
+        controler.setSettings(s_RememberMe.isSelected(), s_Delay.getValue(), select_browser.getValue().toString(), browserPath, nt_on.isSelected(), Integer.parseInt(nt_h.getText()), Integer.parseInt(nt_min.getText()));
         Parent fxml = FXMLLoader.load(getClass().getResource("/StartBotUI.fxml"));
         pane.getChildren().removeAll();
         pane.getChildren().setAll(fxml);
+        controler.checkAutoRun();
     }
 
 

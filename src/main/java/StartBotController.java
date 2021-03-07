@@ -12,7 +12,7 @@ public class StartBotController implements Initializable {
     }
     String login, password;
     public void StartBot(MouseEvent mouseEvent) throws Exception {
-        if (controler.getSelected()){
+        if (controler.getSettingsBoolean("RememberMe")){
             login = controler.getLogin("Login");
             password = controler.getLogin("Password");
         }else {

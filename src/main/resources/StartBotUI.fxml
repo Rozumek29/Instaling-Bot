@@ -17,6 +17,6 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </JFXButton>
-      <Text fill="#b5a586" layoutX="166.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VERSION 3.5" />
+      <Text fill="#b5a586" layoutX="166.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VERSION 3.7" />
    </children>
 </AnchorPane>

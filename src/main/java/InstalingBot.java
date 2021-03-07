@@ -9,7 +9,7 @@ import javafx.stage.StageStyle;
 public class InstalingBot extends Application {
     final static FilesControler controler = new FilesControler();
     public static void main(String[] args) {
-       controler.dirExist();
+       controler.dirsExist();
        Application.launch(args);
     }
     private double xOffset = 0;
