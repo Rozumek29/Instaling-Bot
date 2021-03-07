@@ -46,13 +46,7 @@ public class FilesControler {
                 e.printStackTrace();
             }
         }else if (!(getSettingsBoolean("Notyfication")) && autorun.exists()){
-            try {
-                Runtime.getRuntime().exec("taskkill /F /IM javaw.exe");
-                autorun.delete();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
+            autorun.delete();
         }
     }
 
