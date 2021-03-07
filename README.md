@@ -1,6 +1,6 @@
 # Instaling Bot
 Autor: Rozumek29 \
-Version: 3.5
+Version: 3.8
 
 ## Instalation Gudie
 If you want download my bot, just go to the [releases](https://github.com/Rozumek29/Instaling-Bot/releases), download the newest version, lunch it, and enjoy :)
