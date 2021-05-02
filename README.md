@@ -13,6 +13,10 @@ The bot is logging in as you, it starts a daily session. It searches for a match
 2. Go to settings, you don't have to change anything if you don't want to. To change the browser to a different one, select "Other" and enter the path to the .exe file of your browser [The browser must be chrome-based (Opera, Brave e.c.t)].
 3. Save settings, and start the bot.
 ### CHANGE LOG
+    Version 3.8.2
+        - Bugfix.
+    Version 3.8.1
+        - BugFixes.
     Version 3.8
         - Fix very important bug with notyfication system.
     Version 3.7

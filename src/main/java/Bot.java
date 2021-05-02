@@ -37,7 +37,8 @@ public class Bot extends Thread {
             }
             driver.findElement(By.name("log_email")).sendKeys(login);
             driver.findElement(By.name("log_password")).sendKeys(password);
-            driver.findElement(By.xpath("//*[@id=\"main-container\"]/div[2]/form/div/div[3]/button")).click();
+            Thread.sleep(50);
+            driver.findElement(By.xpath("//*[@id=\"main-container\"]/div[3]/form/div/div[3]/button")).click();
             Thread.sleep(300);
         }catch (Exception e){
             e.printStackTrace();
