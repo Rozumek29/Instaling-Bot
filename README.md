@@ -1,3 +1,5 @@
+# [OUTDATED]
+
 # Instaling Bot
 Autor: Rozumek29 \
 Version: 3.8
